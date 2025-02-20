@@ -26,7 +26,7 @@ function calculatePhaseCompatibility(birthDate1: Date, birthDate2: Date, cycleDa
   // Calculate compatibility based on phase difference
   // When phaseDiff is 0.5 (half cycle), compatibility is 0%
   // When phaseDiff is 0 or 1 (same phase), compatibility is 100%
-  return Math.cos(2 * Math.PI * phaseDiff) * 0.5 + 0.5;
+  return (1 - Math.sin(Math.PI * phaseDiff)) * 0.9 + 0.05;
 }
 
 export function calculateBiorhythm(birthDate: Date) {
